@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="FCamara">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="INDEX, FOLLOW" />
+    <meta name="revisit-after" content="10 days" />
+    <meta name="title" content="FCamara" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <title>FCamara</title>
+
+    <!-- Library Stylesheets -->
+    <link rel="stylesheet" href="public/lib/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="public/lib/components-font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="public/lib/bootswatch/paper/bootstrap.css">
+    <link rel="stylesheet" href="public/lib/animate.css/animate.css">
+    <link rel="stylesheet" href="public/lib/components-font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="public/lib/toastr/toastr.min.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header ng-include="'public/views/shared/header.html'"></header>
+
+    <!-- Section -->
+    <ng-view></ng-view>
+
+    <!-- Library Scripts -->
+    <script type="text/javascript" src="public/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="public/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="public/lib/angular-aria/angular-aria.js"></script>
+    <script type="text/javascript" src="public/lib/angular-material/angular-material.js"></script>
+    <script type="text/javascript" src="public/lib/angular-animate/angular-animate.min.js"></script>
+    <script type="text/javascript" src="public/lib/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="public/lib/angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="public/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="public/lib/toastr/toastr.js"></script>
+    <script type="text/javascript" src="public/lib/ngstorage/ngStorage.min.js"></script>
+    <!-- Modules -->
+    <script type="text/javascript" src="public/js/app.module.js"></script>
+    <!-- Services -->
+    <script type="text/javascript" src="public/js/services/authentication.service.js"></script>
+    <!-- Controllers -->
+    <script type="text/javascript" src="public/js/controllers/login.controller.js"></script>
+    <script type="text/javascript" src="public/js/controllers/home.controller.js"></script>
+</body>
+
+</html>

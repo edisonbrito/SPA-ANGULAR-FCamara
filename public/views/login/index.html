@@ -1,0 +1,31 @@
+<div class="col-md-4 col-md-offset-4" ng-controller="LoginController">
+    <div class="panel panel-default">
+        <div class="panel-heading text-center">Autentique-se</div>
+        <div class="panel-body">
+            <form name="loginForm" novalidate>
+                <div class="form-group" ng-class="{ 'has-error' : loginForm.username.$invalid && loginForm.username.$dirty }">
+                    <label for="username">Usuário</label>
+                    <input ng-model="model.username" type="text" class="form-control" id="username" name="username" placeholder="Informe seu usuário" required/>
+
+                    <div class="alert alert-danger" ng-show="loginForm.username.$invalid && loginForm.username.$dirty">
+                        Usuário inválido
+                    </div>
+                </div>
+
+                <div class="form-group" ng-class="{ 'has-error' : loginForm.password.$invalid && loginForm.password.$dirty }">
+                    <label for="password">Senha</label>
+                    <input ng-model="model.password" type="password" class="form-control" id="password" name="password" required/>
+
+                    <div class="alert alert-danger" ng-show="loginForm.password.$invalid && loginForm.password.$dirty">
+                        Senha inválida.
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-block" ng-click="login(loginForm.$valid)" ng-disabled="loginForm.$invalid || !loginForm.$dirty || processando">
+                    Entrar
+                    <svg ng-show="processando" width="18px" height="18px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt ng-hide" aria-hidden="true"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><circle cx="50" cy="50" r="40" stroke="transparent" fill="none" stroke-width="10" stroke-linecap="round"></circle><circle cx="50" cy="50" r="40" stroke="#ffffff" fill="none" stroke-width="6" stroke-linecap="round"><animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="502"></animate><animate attributeName="stroke-dasharray" dur="2s" repeatCount="indefinite" values="150.6 100.4;1 250;150.6 100.4"></animate></circle></svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
